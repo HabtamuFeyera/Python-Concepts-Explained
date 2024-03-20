@@ -1,0 +1,37 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Python Tutorials{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Python Programming</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#variables-memory">Variables & Memory Management</a></li>
+                    <li class="nav__item"><a href="#numeric-types">Numeric Types</a></li>
+                    <li class="nav__item"><a href="#variable-scopes">Variable Scopes</a></li>
+                    <!-- Add links for other tutorials -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>Thank you for learning with us!</p>
+        </div>
+    </footer>
+</body>
+</html>
